@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mysql:
+      image: mysql:latest
+      environment:
+        MYSQL_DATABASE: imageDB
+        MYSQL_PASSWORD: pass123
+        MYSQL_ROOT_PASSWORD: pass123
+      ports:
+        - "5001:3306"
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "5002:5002"
+    depends_on:
+      - mysql
+  ui:
+    build:
+      context: ./ui/whiteboard
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

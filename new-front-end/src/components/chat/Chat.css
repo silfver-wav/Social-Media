@@ -1,0 +1,192 @@
+body {
+    background-color: #282c34;
+}
+
+.App {
+    text-align: center;
+    max-width: 728px;
+    margin: 0 auto;
+}
+
+.App header {
+    #padding-top: 20%;
+    background-color: #181717;
+    height: 10vh;
+    min-height: 50px;
+    color: white;
+    position: relative;
+    width: 100%;
+    max-width: 728px;
+    top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    #z-index: 99;
+    box-sizing: border-box;
+}
+
+.App section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(40, 37, 53);
+}
+
+main {
+    height: 92vh;
+    #margin: 10vh 0 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+main::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+form {
+    #height: 10vh;
+    #position: fixed;
+    bottom: 0;
+    #background-color: rgb(24, 23, 23);
+    width: 100%;
+    #max-width: 728px;
+    display: flex;
+    font-size: 1.5rem;
+    #padding-left: 10%;
+    align:center;
+}
+
+image {
+    height: 10vh;
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    background-color: #282c34;
+    margin: auto;
+}
+
+input[type = "file"]{
+    display: none;
+}
+
+image label{
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label:hover{
+    transition: 0.5s;
+    background: #40408d;
+}
+
+form button {
+    width: 10%;
+    background-color: black;
+}
+
+form button:hover {
+    transition: 0.5s;
+    background: #40408d;
+}
+
+input {
+    line-height: 1.5;
+    width: 100%;
+    font-size: 1.5rem;
+    background: rgb(58, 58, 58);
+    color: white;
+    outline: none;
+    border: none;
+    #padding: 0 10px;
+}
+
+button {
+    background-color: #282c34; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.sign-in {
+    color: #282c34;
+    background: white;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+ul, li {
+    text-align: left;
+    list-style: none;
+}
+
+p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.sent {
+    flex-direction: row-reverse;
+}
+
+.sent p {
+    color: white;
+    background: #0b93f6;
+    #align-self: flex-end;
+}
+.received p {
+    background: #e5e5ea;
+    color: black;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+}

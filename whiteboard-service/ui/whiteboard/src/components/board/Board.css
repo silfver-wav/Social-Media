@@ -1,0 +1,59 @@
+.board {
+    width: 100%;
+    height: 100%;
+}
+
+.sketch {
+    width: 100%;
+    height: 100%;
+}
+
+.button-container {
+    position: relative;
+    top: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px; 
+    color: #fff;
+    background-color: #4285f4;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #357ae8;
+    border-color: white;
+  }
+  
+  button:active {
+    background-color: #1c62b9;
+    border-color: #1c62b9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .clear-canvas-button {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px; 
+    color: #fff;
+    background-color: #fbbc05; 
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .clear-canvas-button:hover{
+    background-color: #fbbc05;;
+    border-color: white;
+  }
+
+  

@@ -1,0 +1,15 @@
+com\example\userservice\model\UserResponse.class
+com\example\userservice\service\ResponseHandler.class
+com\example\userservice\service\FollowingService.class
+com\example\userservice\model\User.class
+com\example\userservice\UserServiceApplication.class
+com\example\userservice\controller\UserController.class
+com\example\userservice\repository\FollowingRepository.class
+com\example\userservice\service\UserService.class
+com\example\userservice\model\Following.class
+com\example\userservice\interfaces\IFollowingService.class
+com\example\userservice\interfaces\IUserService.class
+com\example\userservice\model\FollowRequest.class
+com\example\userservice\config\CorsConfig.class
+com\example\userservice\repository\UserRepository.class
+com\example\userservice\service\UserMapper.class

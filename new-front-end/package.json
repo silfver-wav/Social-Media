@@ -1,0 +1,69 @@
+{
+  "name": "react-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.4.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mantine/carousel": "^5.10.0",
+    "@mantine/core": "^5.10.0",
+    "@mantine/dates": "^5.10.0",
+    "@mantine/dropzone": "^5.10.0",
+    "@mantine/ds": "^5.10.0",
+    "@mantine/form": "^5.10.0",
+    "@mantine/hooks": "^5.10.0",
+    "@mantine/modals": "^5.10.0",
+    "@mantine/notifications": "^5.10.0",
+    "@mantine/nprogress": "^5.10.0",
+    "@mantine/prism": "^5.10.0",
+    "@mantine/spotlight": "^5.10.0",
+    "@mantine/tiptap": "^5.10.0",
+    "@tabler/icons": "^1.119.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tiptap/extension-link": "^2.0.0-beta.209",
+    "@tiptap/react": "^2.0.0-beta.209",
+    "@tiptap/starter-kit": "^2.0.0-beta.209",
+    "axios": "^1.2.2",
+    "dayjs": "^1.11.7",
+    "embla-carousel-react": "^7.0.5",
+    "framer-motion": "^8.3.0",
+    "net": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "5.0.1",
+    "react-use": "^17.4.0",
+    "react-youtube": "^10.1.0",
+    "recharts": "^2.2.0",
+    "sockjs-client": "^1.6.1",
+    "stompjs": "^2.3.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

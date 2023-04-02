@@ -1,0 +1,121 @@
+version: "3.3"
+
+services:
+  userdb:
+    image: mysql:latest
+    ports:
+      - "5001:3306"
+    environment:
+      MYSQL_DATABASE: userDB
+      MYSQL_USER_PASSWORD: pass123
+      MYSQL_ROOT_PASSWORD: pass123
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - backend
+  user-app:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    depends_on:
+      - userdb
+      - react-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://userdb:3306/userDB?createDatabaseIfNotExists=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: pass123
+      spring.jpa.hibernate.globally_quoted_identifiers: 1
+      spring.jpa.hibernate.ddl-auto: update
+      spring.jpa.database-platform: org.hibernate.dialect.MySQL8Dialect
+      SPRING.JPA.SHOW-SQL: "TRUE"
+    ports:
+      - 8083:8083
+    restart: always
+    networks:
+      - backend
+
+  logdb:
+    image: mysql:latest
+    ports:
+      - "5002:3306"
+    environment:
+      MYSQL_DATABASE: logDB
+      MYSQL_USER_PASSWORD: pass123
+      MYSQL_ROOT_PASSWORD: pass123
+    volumes:
+      - logdb-data:/var/lib/mysql
+    networks:
+      - backend
+  log-app:
+    build:
+      context: ./log-service
+      dockerfile: Dockerfile
+    depends_on:
+      - logdb
+      - react-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://logdb:3306/logDB?createDatabaseIfNotExists=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: pass123
+      spring.jpa.hibernate.globally_quoted_identifiers: 1
+      spring.jpa.hibernate.ddl-auto: update
+      spring.jpa.database-platform: org.hibernate.dialect.MySQL8Dialect
+      SPRING.JPA.SHOW-SQL: "TRUE"
+    ports:
+      - 8082:8082
+    restart: always
+    networks:
+      - backend
+
+  chatdb:
+    image: mysql:latest
+    ports:
+      - "5003:3306"
+    environment:
+      MYSQL_DATABASE: chatDB
+      MYSQL_USER_PASSWORD: pass123
+      MYSQL_ROOT_PASSWORD: pass123
+    volumes:
+      - chatdb-data:/var/lib/mysql
+    networks:
+      - backend
+  chat-app:
+    build:
+      context: ./chat-service
+      dockerfile: Dockerfile
+    depends_on:
+      - chatdb
+      - react-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://chatdb:3306/chatDB?createDatabaseIfNotExists=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: pass123
+      spring.jpa.hibernate.globally_quoted_identifiers: 1
+      spring.jpa.hibernate.ddl-auto: update
+      spring.jpa.database-platform: org.hibernate.dialect.MySQL8Dialect
+      SPRING.JPA.SHOW-SQL: "TRUE"
+    ports:
+      - 8081:8081
+    restart: always
+    networks:
+      - backend
+
+  react-app:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: always
+    networks:
+      - frontend
+
+volumes:
+  db-data:
+  logdb-data:
+  chatdb-data:
+
+
+networks:
+  backend:
+  frontend:
