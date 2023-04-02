@@ -1,6 +1,16 @@
-# Social-Media
-This is a straightforward social media application created using a Spring Boot backend and React frontend. It was developed as part of a Server Development course project
-
+# Social Media WebApp
+This is a social media application built using a Spring Boot backend and React frontend. It was developed as part of a Server Development course project.
+## Features
+* User authentication and authorization
+* Posting picures and text
+* Messaging other friends
+* Following other users
+## Technologies
+* Java
+* Spring boot jpa
+* React
+* Mantine
+## Screenshots
 ![React App - Google Chrome 2023-04-02 16_14_55](https://user-images.githubusercontent.com/56982388/229360788-fa81612c-56ea-4327-8ca8-ebaca0d4dd9b.png)
 ![React App and 16 more pages - Personal - Microsoft​ Edge 2023-01-10 16_56_33 (2)](https://user-images.githubusercontent.com/56982388/229360741-61ada3bc-e0e0-498d-8cc1-8e6a382c0531.png)
 ![React App - Google Chrome 2023-04-02 16_14_42](https://user-images.githubusercontent.com/56982388/229360839-1cdb9edd-be68-4492-8b3f-5e56a0263478.png)
